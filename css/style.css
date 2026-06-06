@@ -74,6 +74,7 @@
 .search-box button{
     width:100px;
     border:none;
+    border-radius: 5px;
     background:#00B207;
     color:#fff;
     font-weight:600;
