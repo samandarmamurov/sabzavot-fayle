@@ -88,16 +88,15 @@
 
 <!-- PRODUCTS -->
 <div class="product-grid">
-
-  <img src="./img/1-rasm.svg" class="product-img">
-  <img src="./img/2-rasm.svg" class="product-img">
-  <img src="./img/3-rasm.svg" >
-  <img src="./img/4-dars.svg" class="product-img">
-  <img src="./img/5-rasm.svg" class="product-img">
-  <img src="./img/6-rasm.svg" class="product-img">
-  <img src="./img/7-rasm.svg" class="product-img">
-  <img src="./img/8-rasm.svg" class="product-img">
-  <img src="./img/9-rasm.svg" class="product-img">
+  <img src="./img/1-rasm.svg"  class="product-img">
+  <img src="./img/2-rasm.svg"  class="product-img">
+  <img src="./img/3-rasm.svg"  class="product-img">
+  <img src="./img/4-dars.svg"  class="product-img">
+  <img src="./img/5-rasm.svg"  class="product-img">
+  <img src="./img/6-rasm.svg"  class="product-img">
+  <img src="./img/7-rasm.svg"  class="product-img">
+  <img src="./img/8-rasm.svg"  class="product-img">
+  <img src="./img/9-rasm.svg"  class="product-img">
   <img src="./img/10-rasm.svg" class="product-img">
   <img src="./img/11-rasm.svg" class="product-img">
   <img src="./img/12-rasm.svg" class="product-img">
@@ -105,13 +104,60 @@
   <img src="./img/14-rasm.svg" class="product-img">
   <img src="./img/15-rasm.svg" class="product-img">
   <img src="./img/16-rasm.svg" class="product-img">
-
 </div>
 
 <!-- MODAL -->
 <div id="modal" class="modal">
-  <span id="close">&times;</span>
-  <img id="modalImg" class="modal-img">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <div class="modal-left">
+      <div class="modal-thumbs" id="modalThumbs"></div>
+      <div class="modal-main-wrap">
+        <img id="modalMainImg" src="" alt="">
+      </div>
+    </div>
+    <div class="modal-right">
+      <div class="modal-header">
+        <h2 id="modalName"></h2>
+        <span class="modal-stock">In Stock</span>
+      </div>
+      <div class="modal-meta-top">
+        <span class="modal-stars">★★★★★</span>
+        <span class="modal-reviews">4 Review</span>
+        <span class="modal-dot">•</span>
+        <span>SKU: </span>
+        <span id="modalSku"></span>
+      </div>
+      <div class="modal-prices">
+        <span class="modal-old" id="modalOld"></span>
+        <span class="modal-new" id="modalNew"></span>
+        <span class="modal-disc" id="modalDisc"></span>
+      </div>
+      <hr class="modal-divider">
+      <div class="modal-brand-row">
+        <span class="modal-label">Brand:</span>
+        <span class="modal-brand-val">Farmary</span>
+        <span class="modal-label" style="margin-left:auto">Share Item</span>
+        <div class="modal-socials">
+          <a href="#">f</a>
+          <a href="#">t</a>
+          <a href="#">p</a>
+          <a href="#">in</a>
+        </div>
+      </div>
+      <p class="modal-desc">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum.</p>
+      <div class="modal-qty-row">
+        <button class="modal-qty-btn" id="qMinus">−</button>
+        <span class="modal-qty-num" id="qNum">1</span>
+        <button class="modal-qty-btn" id="qPlus">+</button>
+        <button class="modal-cart-btn">Add to Cart 🛒</button>
+        <button class="modal-wish-btn">♡</button>
+      </div>
+      <hr class="modal-divider">
+      <div class="modal-info-row">Category: <span id="modalCat"></span></div>
+      <div class="modal-info-row">Tag: <span id="modalTags"></span></div>
+    </div>
+  </div>
 </div>
 
 <script src="./app.js"></script>
