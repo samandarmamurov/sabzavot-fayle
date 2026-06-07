@@ -83,7 +83,7 @@ document.getElementById("qPlus").onclick = () => {
   document.getElementById("qNum").textContent = qty;
 };
 
-
+// yurkacha qizaradi 
 const wishBtn = document.querySelector(".modal-wish-btn");
 const heartIcon = wishBtn.querySelector("i");
 

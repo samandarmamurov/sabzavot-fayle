@@ -507,3 +507,162 @@
     transform: translateY(0);
   }
 }
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.footer{
+    width:100%;
+    background:#111;
+    color:#fff;
+}
+
+.newsletter{
+    background:#f3f3f3;
+    padding:40px 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.news-text h2{
+    color:#222;
+    margin-bottom:10px;
+}
+
+.news-text p{
+    color:#777;
+    max-width:400px;
+    font-size:14px;
+}
+
+.news-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.subscribe-box{
+    display:flex;
+    background:#fff;
+    border-radius:40px;
+    overflow:hidden;
+}
+
+.subscribe-box input{
+    border:none;
+    outline:none;
+    padding:15px 20px;
+    width:320px;
+}
+
+.subscribe-box button{
+    border:none;
+    padding:15px 35px;
+    background:#00b207;
+    color:#fff;
+    cursor:pointer;
+    border-radius:40px;
+}
+
+.socials{
+    display:flex;
+    gap:12px;
+}
+
+.socials a{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#fff;
+    color:#333;
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.footer-logo{
+    max-width:300px;
+}
+
+.footer-logo p{
+    color:#999;
+    margin:20px 0;
+    line-height:1.6;
+}
+
+.contact{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.contact span:first-child,
+.contact span:last-child{
+    border-bottom:2px solid #00b207;
+    padding-bottom:3px;
+}
+
+.footer-links{
+    display:flex;
+    gap:70px;
+}
+
+.footer-links div{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-links h4{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    color:#999;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid #2a2a2a;
+    padding:20px;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-bottom p{
+    color:#888;
+    font-size:14px;
+}
+
+.payments{
+    display:flex;
+    gap:10px;
+}
+
+.payments img{
+    height:30px;
+}
