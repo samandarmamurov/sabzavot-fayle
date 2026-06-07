@@ -569,6 +569,9 @@
     cursor:pointer;
     border-radius:40px;
 }
+.subscribe-box button:hover{
+     background: #009206;
+}
 
 .socials{
     display:flex;
