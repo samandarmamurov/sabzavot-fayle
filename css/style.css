@@ -82,9 +82,26 @@
   color: #333;
 }
 
-.cart {
-  position: relative;
+.icon {
   cursor: pointer;
+  position: relative;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.cart-info {
+  font-size: 12px;
+  color: #777;
+}
+
+.cart-info strong {
+  display: block;
+  color: #222;
 }
 
 .badge {
@@ -131,6 +148,9 @@
 .phone {
   color: #fff;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* BIG IMAGE */
@@ -154,6 +174,7 @@
   border-radius: 8px;
   border: 2px solid transparent;
   transition: 0.3s;
+  display: block;
 }
 
 .product-img:hover {
@@ -162,51 +183,49 @@
   box-shadow: 0 4px 16px rgba(0, 178, 7, 0.15);
 }
 
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  justify-content: flex-end;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal-img {
-  width: 420px;
-  height: 100vh;
-  object-fit: contain;
+/* ZOOM POPUP */
+.zoom-popup {
+  grid-column: span 4;
   background: #fff;
-  padding: 40px 30px;
-  border-radius: 12px 0 0 12px;
-  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.3);
-  animation: slideIn 0.3s ease;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.25s ease;
 }
 
-@keyframes slideIn {
+.zoom-popup img {
+  max-height: 420px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.zoom-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+  transition: 0.2s;
+}
+
+.zoom-close:hover {
+  color: #00B207;
+  transform: scale(1.15);
+}
+
+@keyframes fadeIn {
   from {
-    transform: translateX(100%);
     opacity: 0;
+    transform: translateY(-12px);
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateY(0);
   }
-}
-
-#close {
-  position: absolute;
-  top: 20px;
-  right: 430px;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.2s;
-  line-height: 1;
-}
-
-#close:hover {
-  color: #00B207;
-  transform: scale(1.1);
 }
