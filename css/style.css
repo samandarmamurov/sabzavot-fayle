@@ -135,7 +135,8 @@
 
 /* BIG IMAGE */
 .big-img img {
-  width: 100%;
+  margin-left: 130px;
+  margin-top: 72px;
   display: block;
 }
 
