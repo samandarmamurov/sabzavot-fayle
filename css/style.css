@@ -1,80 +1,211 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-  width:1200px;
-  margin:auto;
+.container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* TOP BAR */
-.top-bar{
-  height:36px;
-  border-bottom:1px solid #ececec;
-  font-size:12px;
-  color:#777;
-  display:flex;
-  align-items:center;
+.top-bar {
+  height: 36px;
+  border-bottom: 1px solid #ececec;
+  font-size: 12px;
+  color: #777;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 /* HEADER */
-.header-main{
-  padding:18px 0;
-  border-bottom:1px solid #ececec;
+.header-main {
+  padding: 18px 0;
+  border-bottom: 1px solid #ececec;
 }
 
-/* NAV */
-.navbar{
-  height:52px;
-  background:#1a1a1a;
-  color:white;
-  display:flex;
-  align-items:center;
+.logo img {
+  height: 40px;
+}
+
+.search-box {
+  width: 500px;
+  display: flex;
+}
+
+.search-box input {
+  flex: 1;
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box button {
+  width: 100px;
+  height: 45px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background: #00B207;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-box button:hover {
+  background: #009206;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.badge {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00B207;
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 52px;
+  background: #1a1a1a;
+}
+
+.navbar .container {
+  height: 52px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00B207;
+}
+
+.phone {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* BIG IMAGE */
+.big-img img {
+  width: 100%;
+  display: block;
 }
 
 /* PRODUCTS */
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  padding:40px;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 100px;
 }
 
-.product-img{
-  width:100%;
-  cursor:pointer;
-  transition:0.3s;
+.product-img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: 0.3s;
 }
 
-.product-img:hover{
-  transform:scale(1.05);
+.product-img:hover {
+  transform: scale(1.05);
+  border-color: #00B207;
+  box-shadow: 0 4px 16px rgba(0, 178, 7, 0.15);
 }
 
 /* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 9999;
 }
 
-.modal-img{
-  width:450px;
-  max-width:90%;
-  background:white;
-  padding:15px;
-  border-radius:10px;
+.modal-img {
+  width: 420px;
+  height: 100vh;
+  object-fit: contain;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
 }
 
-#close{
-  position:absolute;
-  top:20px;
-  right:30px;
-  font-size:40px;
-  color:white;
-  cursor:pointer;
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 430px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+  line-height: 1;
+}
+
+#close:hover {
+  color: #00B207;
+  transform: scale(1.1);
 }
