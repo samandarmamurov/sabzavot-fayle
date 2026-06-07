@@ -82,3 +82,19 @@ document.getElementById("qPlus").onclick = () => {
   qty++;
   document.getElementById("qNum").textContent = qty;
 };
+
+
+const wishBtn = document.querySelector(".modal-wish-btn");
+const heartIcon = wishBtn.querySelector("i");
+
+wishBtn.addEventListener("click", () => {
+  wishBtn.classList.toggle("active");
+
+  if (wishBtn.classList.contains("active")) {
+    heartIcon.classList.remove("fa-regular");
+    heartIcon.classList.add("fa-solid");
+  } else {
+    heartIcon.classList.remove("fa-solid");
+    heartIcon.classList.add("fa-regular");
+  }
+});
